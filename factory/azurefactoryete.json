@@ -1,0 +1,9 @@
+{
+	"name": "azurefactoryete",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "68e1d88d-8a29-4492-beee-54400bb061cb",
+		"tenantId": "4d34a3e9-6fb2-409f-bf6e-65e05adb591d"
+	}
+}
