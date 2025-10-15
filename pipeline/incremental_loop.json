@@ -1,5 +1,5 @@
 {
-	"name": "increment_ingest_copy1",
+	"name": "incremental_loop",
 	"properties": {
 		"activities": [
 			{
@@ -43,7 +43,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "SELECT * FROM @{item().schema}.@{item().table} WHERE @{item().parameters.cdc_col} >'@{if(empty(item().from_date),activity('LastCdC').output.value[0].cdc,item().from_date)}'",
+										"value": "SELECT * FROM @{item().schema}.@{item().table} WHERE @{item().cdc_col} >'@{if(empty(item().from_date),activity('LastCdC').output.value[0].cdc,item().from_date)}'",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -277,7 +277,7 @@
 												"type": "DatasetReference",
 												"parameters": {
 													"container": "bronze",
-													"folder": "cdc",
+													"folder": "@{item().table}_cdc",
 													"file": "cdc.json"
 												}
 											}
