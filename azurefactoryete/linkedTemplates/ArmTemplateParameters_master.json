@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "azurefactoryete"
+		},
+		"AzureProjectDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"AzureProjectDatabase_password": {
+			"value": ""
+		},
+		"AzureProjectDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://tjazureproject.dfs.core.windows.net/"
+		},
+		"AzureProjectDatabase_properties_typeProperties_server": {
+			"value": "tjazureproject.database.windows.net"
+		},
+		"AzureProjectDatabase_properties_typeProperties_database": {
+			"value": "azureprojectdb"
+		},
+		"AzureProjectDatabase_properties_typeProperties_userName": {
+			"value": "tejas"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
